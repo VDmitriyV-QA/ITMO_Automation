@@ -119,7 +119,6 @@ for button in buttons:
     print("-" * 30)
 
 
-# В основном файле (если Car в отдельном файле)
 from car import Car
 
 # Создание и работа с автомобилем
