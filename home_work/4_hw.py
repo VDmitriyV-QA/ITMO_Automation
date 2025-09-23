@@ -1,3 +1,6 @@
+from car import Car
+
+
 class Rectangle:
     def __init__(self, width, height):
         self.width = width
@@ -10,24 +13,6 @@ class Rectangle:
     def calculate_perimeter(self):
         """Расчет периметра прямоугольника"""
         return 2 * (self.width + self.height)
-
-
-# Создание объектов и расчеты
-rect1 = Rectangle(5, 10)
-rect2 = Rectangle(3, 7)
-rect3 = Rectangle(8, 12)
-
-print("Прямоугольник 1:")
-print(f"Площадь: {rect1.calculate_area()}")
-print(f"Периметр: {rect1.calculate_perimeter()}\n")
-
-print("Прямоугольник 2:")
-print(f"Площадь: {rect2.calculate_area()}")
-print(f"Периметр: {rect2.calculate_perimeter()}\n")
-
-print("Прямоугольник 3:")
-print(f"Площадь: {rect3.calculate_area()}")
-print(f"Периметр: {rect3.calculate_perimeter()}")
 
 
 class Math:
@@ -71,18 +56,6 @@ class Math:
         return result
 
 
-# Пример использования
-math_obj = Math(10, 5)
-math_obj.addition()
-math_obj.multiplication()
-math_obj.division()
-math_obj.subtraction()
-
-# С передачей параметров
-math_obj.addition(15, 3)
-math_obj.division(20, 4)
-
-
 class DemoQAButton:
     def __init__(self, button_text):
         self.text = button_text
@@ -94,37 +67,70 @@ class DemoQAButton:
         return f"Клик по кнопке {self.text}"
 
 
-# Создание объектов для кнопок 2-го уровня вложенности
-buttons_data = [
-    "Text Box",
-    "Check Box",
-    "Radio Button",
-    "Web Tables",
-    "Buttons",
-    "Links",
-    "Broken Links - Images",
-    "Upload and Download",
-    "Dynamic Properties"
-]
+def main():
 
-# Создание объектов и работа с ними
-buttons = [DemoQAButton(text) for text in buttons_data]
+    print("=== ДЕМОНСТРАЦИЯ КЛАССА RECTANGLE ===")
+    rect1 = Rectangle(5, 10)
+    rect2 = Rectangle(3, 7)
+    rect3 = Rectangle(8, 12)
 
-# Вывод текста для каждой кнопки и вызов клика
-for button in buttons:
-    print(f"Текст кнопки: {button.text}")
-    print(f"Тип: {button.type}")
-    print(f"Локатор: {button.locator}")
-    print(button.click())
-    print("-" * 30)
+    print("Прямоугольник 1:")
+    print(f"Площадь: {rect1.calculate_area()}")
+    print(f"Периметр: {rect1.calculate_perimeter()}\n")
+
+    print("Прямоугольник 2:")
+    print(f"Площадь: {rect2.calculate_area()}")
+    print(f"Периметр: {rect2.calculate_perimeter()}\n")
+
+    print("Прямоугольник 3:")
+    print(f"Площадь: {rect3.calculate_area()}")
+    print(f"Периметр: {rect3.calculate_perimeter()}\n")
 
 
-from car import Car
+    print("=== ДЕМОНСТРАЦИЯ КЛАССА MATH ===")
+    math_obj = Math(10, 5)
+    math_obj.addition()
+    math_obj.multiplication()
+    math_obj.division()
+    math_obj.subtraction()
 
-# Создание и работа с автомобилем
-car1 = Car("черный", "внедорожник", 2018)
-car1.start_engine()
-car1.set_color("белый")
-car1.set_year(2023)
-print(car1.get_info())
-car1.stop_engine()
+
+    math_obj.addition(15, 3)
+    math_obj.division(20, 4)
+    print()
+
+
+    print("=== ДЕМОНСТРАЦИЯ КЛАССА DEMOQABUTTON ===")
+    buttons_data = [
+        "Text Box",
+        "Check Box",
+        "Radio Button",
+        "Web Tables",
+        "Buttons",
+        "Links",
+        "Broken Links - Images",
+        "Upload and Download",
+        "Dynamic Properties"
+    ]
+
+    buttons = [DemoQAButton(text) for text in buttons_data]
+
+    for button in buttons:
+        print(f"Текст кнопки: {button.text}")
+        print(f"Тип: {button.type}")
+        print(f"Локатор: {button.locator}")
+        print(button.click())
+        print("-" * 30)
+
+
+    print("=== ДЕМОНСТРАЦИЯ КЛАССА CAR ===")
+    car1 = Car("черный", "внедорожник", 2018)
+    car1.start_engine()
+    car1.set_color("белый")
+    car1.set_year(2023)
+    print(car1.get_info())
+    car1.stop_engine()
+
+
+if __name__ == "__main__":
+    main()

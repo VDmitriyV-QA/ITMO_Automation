@@ -33,16 +33,16 @@ class Car:
         return f"Автомобиль: {self.color} {self.type} {self.year} года"
 
 
-# Пример использования (можно добавить в конец файла)
+
 if __name__ == "__main__":
-    # Создание автомобиля
+
     my_car = Car("красный", "седан", 2020)
 
-    # Использование методов
+
     my_car.start_engine()
     my_car.stop_engine()
 
-    # Изменение параметров
+
     my_car.set_color("синий")
     my_car.set_type("хэтчбек")
     my_car.set_year(2022)
