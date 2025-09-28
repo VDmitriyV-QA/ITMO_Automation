@@ -49,7 +49,6 @@ class Math:
         print(f"Вычитание: {a} - {b} = {result}")
         return result
 
-
 class DemoQAButton:
     def __init__(self, button_text):
         self.text = button_text
